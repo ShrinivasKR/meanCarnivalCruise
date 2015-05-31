@@ -1,0 +1,55 @@
+These instructions apply to Windows 7 and Mac OS.
+
+Install Git
+	http://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+	Be sure to install with Windows PATH variables as well
+Install Node.js
+	https://nodejs.org/download/
+Install MongoDB
+	On Amazon EC2:
+		http://docs.mongodb.org/ecosystem/platforms/amazon-ec2/
+	On Windows:
+		Download and install MongoDB
+			https://www.mongodb.org/downloads
+		Create the folder structure: C:\data\db\
+	On Mac OS:
+		Download MongoDB
+			https://www.mongodb.org/downloads
+		Extract mongodb
+			cd ~/Downloads
+			sudo mv mongodb-osx-x86_64-3.0.3 /usr/local/mongodb
+		Make this directory
+			sudo mkdir -p /data/db
+		Assign proper permission
+			sudo chown 'whoami' /data/db
+			Note: 'whoami' is your user name
+		Add mongodb/bin to $PATH
+			cd ~
+         		vim .bash_profile
+				Now save into those files these 2 following lines:
+					export MONGO_PATH=/usr/local/mongodb
+					export PATH=$PATH:$MONGO_PATH/bin 
+	MongoDB will look in the C:\data\db\ directory by default for data in Windows (/data/db on Mac OS)
+Run Node.js Command Prompt (Node.js Command Prompt exists on Windows. Open Terminal in Mac OS by pressing command key and spacebar, then typing "terminal".)
+	Inside Node.js Command Prompt
+		Change directory to meanGetTogether folder
+			cd somepath\meanGetTogether
+		Install bower, method-override, body-parser, express, and mongoose
+			sudo npm install -g bower && npm install && bower install
+Run MongoDB
+	On Windows:
+		Inside Command Prompt, change to MongoDB binaries folder
+			cd C:\Program Files\MongoDB\Server\3.0\bin
+		Start the database daemon
+			mongod.exe
+		Optional: Start the MongoDB console to run commands
+			mongo.exe
+	On Mac OS:
+		Inside Terminal, start MongoDB
+			mongod
+		Optional: Start the MongoDB console to run commands
+			mongo
+Start the Node.js server in the project root-directory meanGetTogether
+	node server.js
+Open a Web browser (such as Firefox, Internet Explorer, Safari, Chrome) to the following URL:
+	http://localhost:8080

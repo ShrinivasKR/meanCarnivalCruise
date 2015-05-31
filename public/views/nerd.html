@@ -1,0 +1,12 @@
+<div class="jumbotron text-center">
+	<h1>Nerds and Proud</h1>
+
+	<p>{{ tagline }}</p>
+
+    <button ng-click="getNerdsList()">Get Nerds</button>
+    <button ng-click="hide()">Options</button>
+    <input type="text" ng-model="textbox.textBoxValue" name="textBoxValue" ng-show="visible">
+    <button ng-click="create()" ng-show="visible">Create</button>
+    <p>{{ status }}</p>
+    <p>{{ nerdData }}</p>
+</div>
