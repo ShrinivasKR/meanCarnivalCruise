@@ -1,4 +1,4 @@
-var app = angular.module('StarterApp', ['ngMaterial', 'ngMdIcons', 'ngRoute', 'mdDateTime', 'ui.bootstrap', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'GeekService', 'LoginCtrl', 'GroupsCtrl', 'EventCtrl', 'EventService', 'ProfileCtrl', 'SettingsCtrl']);
+var app = angular.module('StarterApp', ['ngMaterial', 'ngMdIcons', 'ngRoute', 'mdDateTime', 'ui.bootstrap', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'GeekService', 'LoginCtrl', 'GroupsCtrl', 'EventCtrl', 'EventService', 'ProfileCtrl', 'UserService', 'SettingsCtrl']);
 // stripped out: ,
 
 app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog', function ($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $location, $log) {
@@ -12,19 +12,19 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
     $scope.menu = [
         {
             link: '/dashboard',
-            title: 'Dashboard',
-            icon: 'dashboard',
+            title: 'Culinary Delights',
+            icon: 'restaurant_menu',
             controller: 'MainController'
     },
         {
             link: '/profile',
-            title: 'Profile',
-            icon: 'person'
+            title: 'Ship Activities',
+            icon: 'event_note'
 
     }, {
             link: '/groups',
-            title: 'Groups',
-            icon: 'group'
+            title: 'Ask Freddy',
+            icon: 'face'
     },
 //        {
 //            link: '/nerds',
@@ -59,38 +59,6 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
 //            icon: 'settings'
 //    }
   ];
-    $scope.activity = [
-        {
-            what: 'Brunch this weekend?',
-            who: 'Ali Conners',
-            when: '3:08PM',
-            notes: " I'll be in your neighborhood doing errands"
-      },
-        {
-            what: 'Summer BBQ',
-            who: 'to Alex, Scott, Jennifer',
-            when: '3:08PM',
-            notes: "Wish I could come out but I'm out of town this weekend"
-      },
-        {
-            what: 'Oui Oui',
-            who: 'Sandra Adams',
-            when: '3:08PM',
-            notes: "Do you have Paris recommendations? Have you ever been?"
-      },
-        {
-            what: 'Birthday Gift',
-            who: 'Trevor Hansen',
-            when: '3:08PM',
-            notes: "Have any ideas of what we should get Heidi for her birthday?"
-      },
-        {
-            what: 'Recipe to try',
-            who: 'Brian Holt',
-            when: '3:08PM',
-            notes: "We should eat this: Grapefruit, Squash, Corn, and Tomatillo tacos"
-      },
-    ];
     $scope.alert = '';
     $scope.showListBottomSheet = function ($event) {
         $scope.alert = '';
@@ -115,7 +83,21 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
                 $scope.alert = 'You cancelled the dialog.';
             });
     };
+    $scope.showPeople = function (ev) {
+        $mdDialog.show({
+                controller: DialogController,
+                template: '<md-dialog aria-label="Mango (Fruit)"> <md-content class="md-padding"> <label>Search: <input ng-model="searchText"></label><table id="searchTextResults"> <tr> <th>Name</th> </tr><tr ng-repeat="user in fullUsersList | filter:searchText"> <td>{{user.name}}</td></tr></table><hr><label>Any: <input ng-model="search.$"></label><br><label>Name only <input ng-model="search.name"></label><br><br><table id="searchObjResults"> <tr> <th>Name</th> </tr><tr ng-repeat="userObj in fullUsersList | filter:search:strict"> <td>{{userObj.name}}</td></tr></table> </md-content> <div class="md-actions" layout="row"> <span flex></span> <md-button ng-click="answer(\'not useful\')"> Cancel </md-button> <md-button ng-click="answer(\'useful\')" class="md-primary"> Save </md-button> </div></md-dialog>',
+                targetEvent: ev,
+            })
+            .then(function (answer) {
+                $scope.alert = 'You said the information was "' + answer + '".';
+            }, function () {
+                $scope.alert = 'You cancelled the dialog.';
+            });
+    };
 }]);
+
+
 
 app.controller('ListBottomSheetCtrl', function ($scope, $mdBottomSheet) {
     $scope.items = [

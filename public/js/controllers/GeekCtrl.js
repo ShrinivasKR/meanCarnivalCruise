@@ -177,7 +177,7 @@ angular.module('GeekCtrl', []).controller('GeekController', ["$scope", "GeekFact
                 console.log("Created new location");
             }).
         error(function (error) {
-            console.log('Inserting location: ' + $scope.textbox.textBoxValue + ", " + $scope.textbox.textBoxValueTwo + " ---- " + 'Unable to insert location: ' + error.message);
+            console.log('Inserting location: ' + lat + ", " + long + " ---- " + 'Unable to insert location: ' + error.message);
         });
     }
 

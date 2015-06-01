@@ -1,6 +1,6 @@
 angular.module('NerdService', []).factory('NerdFactory', ['$http', function($http) 
 {
-    var urlBase = "/api/nerds";
+    var urlBase = "/api/users";
     var nerdService = {};
     // call to get all nerds
     nerdService.getAllNerds = function () {

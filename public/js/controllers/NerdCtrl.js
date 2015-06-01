@@ -21,7 +21,8 @@ angular.module('NerdCtrl', []).controller('NerdController', ["$scope", "NerdFact
 
     $scope.create = function () {
         var newNerd = {
-            name: $scope.textbox.textBoxValue
+            name: $scope.textbox.textBoxValue,
+            location: '556a428ddc92f7081175f198'
         }
         $scope.status = 'Inserting Nerd: ' + $scope.textbox.textBoxValue;
         nerdFactory.createNerd(newNerd)
