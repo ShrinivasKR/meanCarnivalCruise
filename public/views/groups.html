@@ -3,7 +3,7 @@
 </md-button>
 <md-content flex style="height: calc(100% - 170px)">
 <ng-md-icon icon="face"></ng-md-icon>
-    <md-card>
+    <md-card ng-click="showAdd($event)">
         <img ng-src="" class="md-card-image">
         <md-card-content>
             <h2 class="md-title">Family</h2>
@@ -16,7 +16,7 @@
             <md-button>Action 2</md-button>
         </div>
     </md-card>
-    <md-card>
+    <md-card ng-click="showAdd($event)">
         <img ng-src="" class="md-card-image">
         <md-card-content>
             <h2 class="md-title">Friends</h2>
@@ -29,7 +29,7 @@
             <md-button>Action 2</md-button>
         </div>
     </md-card>
-    <md-card>
+    <md-card ng-click="showAdd($event)">
         <img ng-src="" class="md-card-image">
         <md-card-content>
             <h2 class="md-title">Dates</h2>
