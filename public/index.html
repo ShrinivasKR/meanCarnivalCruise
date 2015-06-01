@@ -75,40 +75,36 @@
                 <md-tabs md-stretch-tabs class="md-primary md-hue-1" md-selected="data.selectedIndex">
                     <md-tab id="tab1" aria-controls="tab1-content">
                         Nearby
-                        <ng-md-icon icon="my_location"></ng-md-icon>
                     </md-tab>
                     <md-tab id="tab2" aria-controls="tab2-content">
                         Type
-                        <ng-md-icon icon="view_module"></ng-md-icon>
                     </md-tab>
                     <md-tab id="tab3" aria-controls="tab3-content">
                         Freddy
-                        <ng-md-icon icon="face"></ng-md-icon>
-                        face
                     </md-tab>
                 </md-tabs>
                 <ng-view>
                     <!-- ANGULAR DYNAMIC CONTENT -->
                 </ng-view>
-                <md-toolbar ng-sh ow="!showSearch" style="position: absolute; bottom: 0px; width: 100%;">
-                    <div class="md-toolbar-tools">
-                        <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
-                            <ng-md-icon icon="arrow_back"></ng-md-icon>
-                        </md-button>
-                        <h3>
-                            Bottom Bar
-                        </h3>
-                        <span flex></span>
-                        <md-button aria-label="Search" ng-click="showSearch = !showSearch">
-                            <ng-md-icon icon="photo_album"></ng-md-icon>
-                        </md-button>
-                        <md-button aria-label="Open Settings" ng-click="showListBottomSheet($event)">
-                            <ng-md-icon icon="photo_camera"></ng-md-icon>
-                        </md-button>
-                    </div>
-
-                </md-toolbar>
             </md-content>
+            <md-toolbar ng-sh ow="!showSearch" style="position: absolute; bottom: 0px; width: 100%;">
+                <div class="md-toolbar-tools">
+                    <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
+                        <ng-md-icon icon="arrow_back"></ng-md-icon>
+                    </md-button>
+                    <h3>
+                        Bottom Bar
+                    </h3>
+                    <span flex></span>
+                    <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+                        <ng-md-icon icon="photo_album"></ng-md-icon>
+                    </md-button>
+                    <md-button aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+                        <ng-md-icon icon="photo_camera"></ng-md-icon>
+                    </md-button>
+                </div>
+
+            </md-toolbar>
         </div>
     </div>
     <!-- Angular Material Dependencies -->

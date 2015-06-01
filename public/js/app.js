@@ -25,30 +25,19 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
             link: '/groups',
             title: 'Ask Freddy',
             icon: 'face'
-    },
-//        {
-//            link: '/nerds',
-//            title: 'Nerds',
-//            icon: 'school',
-//            controller: 'NerdController'
-//
-//    },
-//
-//        {
-//            link: '/geeks',
-//            title: 'Geek',
-//            icon: 'school',
-//            controller: 'GeekController'
-//
-//    },
-        {
+    }, {
             link: '/event',
             title: 'Create Event',
             icon: 'event'
     }
   ];
     $scope.admin = [
-        {
+         {
+                    link: '/groups',
+                    title: 'My Groups',
+                    icon: 'group'
+            },
+            {
             link: '/settings',
             title: 'Settings',
             icon: 'settings'
