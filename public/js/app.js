@@ -22,23 +22,23 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
             icon: 'event_note'
 
     }, {
-            link: '/groups',
+            link: '/event',
             title: 'Ask Freddy',
             icon: 'face'
-    }, 
-        {
-            link: '/event',
-            title: 'Create Event',
-            icon: 'event'
-    }
+    },
+//        {
+//            link: '/event',
+//            title: 'Create Event',
+//            icon: 'event'
+//    }
   ];
     $scope.admin = [
-         {
-                    link: '/groups',
-                    title: 'My Groups',
-                    icon: 'group'
+        {
+            link: '/groups',
+            title: 'My Groups',
+            icon: 'group'
             },
-            {
+        {
             link: '/settings',
             title: 'Settings',
             icon: 'settings'
@@ -65,7 +65,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
         $mdDialog.show({
                 controller: DialogController,
                 template: '<md-dialog aria-label="Mango (Fruit)"> <md-content class="md-padding"> <form name="userForm"> <div layout layout-sm="column"> <md-input-container flex> <label>First Name</label> <input ng-model="user.firstName" placeholder="Placeholder text"> </md-input-container> <md-input-container flex> <label>Last Name</label> <input ng-model="theMax"> </md-input-container> </div> <md-input-container flex> <label>Address</label> <input ng-model="user.address"> </md-input-container> <div layout layout-sm="column"> <md-input-container flex> <label>City</label> <input ng-model="user.city"> </md-input-container> <md-input-container flex> <label>State</label> <input ng-model="user.state"> </md-input-container> <md-input-container flex> <label>Postal Code</label> <input ng-model="user.postalCode"> </md-input-container> </div> <md-input-container flex> <label>Biography</label> <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea> </md-input-container> </form> </md-content> <div class="md-actions" layout="row"> <span flex></span> <md-button ng-click="answer(\'not useful\')"> Cancel </md-button> <md-button ng-click="answer(\'useful\')" class="md-primary"> Save </md-button> </div></md-dialog>',
-//                template: '../views/dashboard.html',
+                //                template: '../views/dashboard.html',
                 targetEvent: ev,
             })
             .then(function (answer) {
@@ -188,6 +188,14 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         })
         .when('/groups', {
             templateUrl: 'views/groups.html',
+            controller: 'GroupsController'
+        })
+        .when('/editFamily', {
+            templateUrl: 'views/editFamily.html',
+            controller: 'GroupsController'
+        })
+        .when('/reservationTimePicker', {
+            templateUrl: 'views/reservationTimePicker.html',
             controller: 'GroupsController'
         })
         .when('/settings', {

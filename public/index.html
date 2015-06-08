@@ -14,14 +14,23 @@
 <body layout="row" ng-controller="AppCtrl">
     <div layout="row" flex class="content-wrapper">
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-            <md-toolbar class="md-tall md-hue-2">
+            <md-toolbar class="md-tall md-hue-2" layout="row">
                 <span flex></span>
                 <div layout="column" class="md-toolbar-tools-bottom inset">
+                    <!--                    <div layout="row" flex="flex" class="fill-height">-->
                     <user-avatar></user-avatar>
                     <span></span>
                     <div>John Doe</div>
                     <div>PassengerID: Y2K666</div>
+                    <!--                    </div>-->
+<!--                    <div layout="row" flex="flex" class="fill-height">-->
+
+<!--                    </div>-->
                 </div>
+                <md-switch layout="column" ng-model="data.cb1" aria-label="Switch 1">
+                    Incognito Mode: {{ data.cb1 }}
+                </md-switch>
+                
             </md-toolbar>
             <md-list>
                 <md-item ng-repeat="item in menu">
@@ -77,24 +86,24 @@
                     <!-- ANGULAR DYNAMIC CONTENT -->
                 </ng-view>
             </md-content>
-            <md-toolbar ng-sh ow="!showSearch" style="position: absolute; bottom: 0px; width: 100%;">
-                <div class="md-toolbar-tools">
-                    <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
-                        <ng-md-icon icon="arrow_back"></ng-md-icon>
-                    </md-button>
-                    <h3>
-                        Bottom Bar
-                    </h3>
-                    <span flex></span>
-                    <md-button aria-label="Search" ng-click="showSearch = !showSearch">
-                        <ng-md-icon icon="photo_album"></ng-md-icon>
-                    </md-button>
-                    <md-button aria-label="Open Settings" ng-href="camera.html">
-                        <ng-md-icon icon="photo_camera"></ng-md-icon>
-                    </md-button>
-                </div>
+            <!--<md-toolbar ng-sh ow="!showSearch" style="position: absolute; bottom: 0px; width: 100%;">-->
+                <!--<div class="md-toolbar-tools">-->
+                    <!--<md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">-->
+                        <!--<ng-md-icon icon="arrow_back"></ng-md-icon>-->
+                    <!--</md-button>-->
+                    <!--<h3>-->
+                        <!--Bottom Bar-->
+                    <!--</h3>-->
+                    <!--<span flex></span>-->
+                    <!--<md-button aria-label="Search" ng-click="showSearch = !showSearch">-->
+                        <!--<ng-md-icon icon="photo_album"></ng-md-icon>-->
+                    <!--</md-button>-->
+                    <!--<md-button aria-label="Open Settings" ng-href="camera.html">-->
+                        <!--<ng-md-icon icon="photo_camera"></ng-md-icon>-->
+                    <!--</md-button>-->
+                <!--</div>-->
 
-            </md-toolbar>
+            <!--</md-toolbar>-->
         </div>
     </div>
     <!-- Angular Material Dependencies -->

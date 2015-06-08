@@ -1,0 +1,24 @@
+<div class="text-center">
+    <md-content layout-padding="" layout="row" layout-sm="column">
+        <md-input-container>
+            <label>Username</label>
+            <input ng-model="user.username">
+        </md-input-container>
+    </md-content>
+</div>
+<div class="modal-content">
+    <time-date-picker ng-model="myTime.date" default-mode="time" display-twentyfour="true"></time-date-picker>
+</div>
+
+<md-toolbar ng-sh ow="!showSearch" style="position: absolute; bottom: 0px; width: 100%;">
+<div class="md-toolbar-tools">
+<md-button ng-href="/dashboard" hide-gt-md aria-label="Menu">
+<ng-md-icon icon="arrow_back"></ng-md-icon>
+</md-button>
+<h3>
+Bottom Bar
+</h3>
+<span flex></span>
+</div>
+
+</md-toolbar>
