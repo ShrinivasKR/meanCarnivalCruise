@@ -25,7 +25,8 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
             link: '/groups',
             title: 'Ask Freddy',
             icon: 'face'
-    }, {
+    }, 
+        {
             link: '/event',
             title: 'Create Event',
             icon: 'event'
