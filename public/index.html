@@ -1,11 +1,11 @@
 <html lang="en" ng-app="StarterApp">
 
 <head>
-    <base href="http://localhost:8080/" target="_blank">
+    <base href="http://localhost:8060/" target="_blank">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/materialize.css" />
     <link rel="stylesheet" href="css/angular-material.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='css/md-date-time.css'>
     <link rel="stylesheet" href="css/app.css" />
     <!--    <link rel="stylesheet" href="css/range-picker.css" />-->
@@ -72,17 +72,7 @@
             </md-toolbar>
             <md-content flex md-scroll-y>
 
-                <md-tabs md-stretch-tabs class="md-primary md-hue-1" md-selected="data.selectedIndex">
-                    <md-tab id="tab1" aria-controls="tab1-content">
-                        Nearby
-                    </md-tab>
-                    <md-tab id="tab2" aria-controls="tab2-content">
-                        Type
-                    </md-tab>
-                    <md-tab id="tab3" aria-controls="tab3-content">
-                        Freddy
-                    </md-tab>
-                </md-tabs>
+
                 <ng-view>
                     <!-- ANGULAR DYNAMIC CONTENT -->
                 </ng-view>
@@ -116,6 +106,7 @@
     <script src="js/angular-material.js"></script>
     <script src="js/angular-messages.js"></script>
     <script src='js/md-date-time.js'></script>
+    <script src='js/materialize.js'></script>
     <script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
     <!--
         <script src="js/angular-touch.js"></script>
