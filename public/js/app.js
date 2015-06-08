@@ -11,6 +11,12 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'
     };
     $scope.menu = [
         {
+            link: '/status',
+            title: 'Status',
+            icon: 'healing',
+            controller: 'MainController'
+            },
+        {
             link: '/dashboard',
             title: 'Culinary Delights',
             icon: 'restaurant_menu',
@@ -194,10 +200,26 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             templateUrl: 'views/editFamily.html',
             controller: 'GroupsController'
         })
+        .when('/invitePeople', {
+            templateUrl: 'views/invitePeople.html',
+            controller: 'GroupsController'
+        })
         .when('/reservationTimePicker', {
             templateUrl: 'views/reservationTimePicker.html',
             controller: 'GroupsController'
         })
+        .when('/status', {
+            templateUrl: 'views/status.html',
+            controller: 'GroupsController'
+        })
+                .when('/askFreddyResults', {
+                    templateUrl: 'views/askFreddyResults.html',
+                    controller: 'GroupsController'
+                })
+                                .when('/excursions', {
+                                    templateUrl: 'views/excursions.html',
+                                    controller: 'GroupsController'
+                                })
         .when('/settings', {
             templateUrl: 'views/settings.html',
             controller: 'SettingsController'

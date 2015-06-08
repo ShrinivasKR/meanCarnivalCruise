@@ -1,0 +1,83 @@
+<!--<ng-md-icon icon="my_location"></ng-md-icon>-->
+<md-tabs md-stretch-tabs class="md-primary md-hue-1" md-selected="data.selectedIndex">
+    <md-tab id="tab1" aria-controls="tab1-content">
+        Recommended for you
+    </md-tab>
+</md-tabs>
+
+<ng-switch on="data.selectedIndex" class="tabpanel-container">
+    <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="../img/guys-burger-joint-1.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">GUY'S BURGER JOINT <i class="mdi-navigation-more-vert right"></i></span>
+                <p><a href="#">This is a link</a>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">GUY'S BURGER JOINT <i class="mdi-navigation-close right"></i></span>
+                <p>We went looking for someone to help us grill up the best burgers at sea, and we found just the guy. Carnival has teamed up with best-selling author, restaurateur and Food Network personality Guy Fieri to bring all the authentic appeal of a roadside burger shack to Guyâ€™s Burger Joint, the cool poolside spot for hot burgers and hand-cut fries. Try a fresh-off-the-grill burger Guyâ€™s way, or take it off-road to our toppings bar and truly make it your own.</p>
+                <a class="waves-effect waves-light btn" href="/reservationTimePicker">Make Reservation </a>
+                <a class="waves-effect waves-light btn"  href="/invitePeople">Invite Companions</a>
+                <a class="waves-effect waves-light btn">Contact Manager  </a>
+                <a class="waves-effect waves-light btn">View Details     </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="../img/jiji-asian-kitchen-dinner-3.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">JI JI ASIAN KITCHEN  <i class="mdi-navigation-more-vert right"></i></span>
+                <p><a href="#">This is a link</a>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">JI JI ASIAN KITCHEN <i class="mdi-navigation-close right"></i></span>
+                <p>A modern dining spot inspired by a millennia-old society, Ji Ji Asian Kitchen serves up enticing dishes in an eclectic space that brings not just good food, but good fortune â€” and perhaps a surprise or two â€” to the table. Youâ€™ll enjoy your meal among Asian prayer rolls and Mongolian-inspired fabrics that infuse northern-country style into this unique culinary experience. Ji Ji offers a full-service menu featuring a mix of exotic and familiar dishes designed to challenge and delight your senses.</p>
+                <a class="waves-effect waves-light btn" href="/reservationTimePicker">Make Reservation </a>
+                <a class="waves-effect waves-light btn"  href="/invitePeople">Invite Companions</a>
+                <a class="waves-effect waves-light btn">Contact Manager  </a>
+                <a class="waves-effect waves-light btn">View Details     </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="../img/skyride-1.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">SKYRIDE <i class="mdi-navigation-more-vert right"></i></span>
+                <p><a href="#">This is a link</a>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">SKYRIDE <i class="mdi-navigation-close right"></i></span>
+                <p>SkyRide is a bit like riding a bike â€” youâ€™ll never forget it. But SkyRide is also completely unlike riding a bike, because when was the last time you biked around a ship, high above the deck and even higher above the sparkling blue sea? Zip safely around our two-lane suspended course in a pedal-powered go-mobile, in search of your biggest racing victory, lowest lap timeâ€¦ or simply the greatest view.</p>
+                <a class="waves-effect waves-light btn">Stuff</a>
+                <a class="waves-effect waves-light btn">Stuff</a>
+                <a class="waves-effect waves-light btn">Stuff</a>
+                <a class="waves-effect waves-light btn">Stuff</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="../img/seuss-at-sea-2.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">SEUSS AT SEA  <i class="mdi-navigation-more-vert right"></i></span>
+                <p><a href="#">This is a link</a>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">SEUSS AT SEA <i class="mdi-navigation-close right"></i></span>
+                <p>Dr. Seussâ€™s timeless stories are the kind kids memorize, and this is the kind of cruise youâ€™ll remember for a lifetime. The whole family will still enjoy all the classic Carnival activities, but the littlest ones, and their families, will also enjoy an all-new, extra-special experience as the fantastical world of Dr. Seuss comes to life around them.</p>
+                <a class="waves-effect waves-light btn">Stuff</a>
+                <a class="waves-effect waves-light btn">Stuff</a>
+                <a class="waves-effect waves-light btn">Stuff</a>
+                <a class="waves-effect waves-light btn">Stuff</a>
+            </div>
+        </div>
+    </div>
+</ng-switch>
